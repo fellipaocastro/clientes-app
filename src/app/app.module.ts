@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ClientesModule } from './clientes/clientes.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, ClientesModule],
+  imports: [BrowserModule, AppRoutingModule, ClientesModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
