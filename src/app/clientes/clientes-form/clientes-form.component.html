@@ -7,35 +7,35 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>ID:</label>
-                    <input type="text" class="form-control" disabled />
+                    <label for="id">ID:</label>
+                    <input type="text" class="form-control" id="id" disabled value="{{ cliente.id }}" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Data de cadastro:</label>
-                    <input type="text" class="form-control" disabled />
+                    <label for="dataCadastro">Data de cadastro:</label>
+                    <input type="text" class="form-control" id="dataCadastro" disabled value="{{ cliente.dataCadastro }}" />
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Nome: *</label>
-                    <input type="text" class="form-control" />
+                    <label for="nome">Nome: *</label>
+                    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="cliente.nome" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>CPF: *</label>
-                    <input type="text" class="form-control" />
+                    <label for="cpf">CPF: *</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="cliente.cpf" />
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2">
-                <button type="submit" class="btn btn-success">
-                    <i class="fa fa-save"></i> Salvar
+                <button type="submit" class="btn btn-success" (click)="clicar()">
+                    <em class="fa fa-save"></em> Salvar
                 </button>
             </div>
         </div>
