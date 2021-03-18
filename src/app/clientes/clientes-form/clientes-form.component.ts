@@ -11,6 +11,8 @@ import { ClientesService } from '../../services/clientes.service';
 })
 export class ClientesFormComponent implements OnInit {
   cliente: Cliente;
+  success = false;
+  errors: string[];
 
   constructor(private service: ClientesService) {
     this.cliente = service.getCliente();
@@ -19,6 +21,14 @@ export class ClientesFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.cliente);
+    this.service.salvar(this.cliente).subscribe(
+      (response) => {
+        console.log(response);
+        this.success = true;
+      },
+      (errorResponse) => {
+        this.errors = errorResponse.error.errors;
+      }
+    );
   }
 }
