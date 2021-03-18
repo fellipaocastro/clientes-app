@@ -8,13 +8,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="id">ID:</label>
-                    <input type="text" class="form-control" id="id" disabled value="{{ cliente.id }}" />
+                    <input type="text" class="form-control" id="id" name="id" disabled [ngModel]="cliente.id" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="dataCadastro">Data de cadastro:</label>
-                    <input type="text" class="form-control" id="dataCadastro" disabled value="{{ cliente.dataCadastro }}" />
+                    <input type="text" class="form-control" id="dataCadastro" name="dataCadastro" disabled [ngModel]="cliente.dataCadastro" />
                 </div>
             </div>
         </div>
