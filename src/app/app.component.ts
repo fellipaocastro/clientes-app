@@ -16,12 +16,16 @@ export class AppComponent implements AfterViewInit {
 
       // Add active state to sidbar nav links
       const path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-      $('#layoutSidenav_nav .sb-sidenav a.nav-link').each(() => {
-        // @ts-ignore
-        if (this.href === path) {
-          $(this).addClass('active');
+      $('#layoutSidenav_nav .sb-sidenav a.nav-link').each(
+        (index: number, value: HTMLElement) => {
+          console.log(path);
+          // @ts-ignore
+          if (value.href === path) {
+            console.log('active');
+            $(value).addClass('active');
+          }
         }
-      });
+      );
 
       // Toggle the side navigation
       $('#sidebarToggle').on('click', (e: { preventDefault: () => void }) => {
