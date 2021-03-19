@@ -17,6 +17,12 @@ export class ClientesService {
     );
   }
 
+  getClientes(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(
+      'https://fc-clientes.herokuapp.com/sistema-clientes/api/clientes'
+    );
+  }
+
   getCliente(): Cliente {
     const cliente: Cliente = new Cliente();
     cliente.nome = 'Fellipe';
