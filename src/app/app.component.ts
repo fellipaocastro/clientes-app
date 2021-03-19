@@ -14,17 +14,6 @@ export class AppComponent implements AfterViewInit {
     (($) => {
       'use strict';
 
-      // Add active state to sidbar nav links
-      const path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-      $('#layoutSidenav_nav .sb-sidenav a.nav-link').each(
-        (index: number, value: HTMLElement) => {
-          // @ts-ignore
-          if (value.href === path) {
-            $(value).addClass('active');
-          }
-        }
-      );
-
       // Toggle the side navigation
       $('#sidebarToggle').on('click', (e: { preventDefault: () => void }) => {
         e.preventDefault();
