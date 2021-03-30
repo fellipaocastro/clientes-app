@@ -7,7 +7,13 @@
     "build": "npx ng build",
     "test": "npx ng test",
     "lint": "npx ng lint",
-    "e2e": "npx ng e2e"
+    "e2e": "npx ng e2e",
+    "eslint": "npx eslint src -c .eslintrc --ext js",
+    "eslint-fix": "npx eslint --fix src -c .eslintrc --ext js",
+    "prettier": "npx prettier --check 'src/**/*.js'",
+    "prettier-fix": "npx prettier --write 'src/**/*.js'",
+    "sass-lint": "npx sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
+    "sass-lint-fix": "npx sass-lint-auto-fix -c .sass-lint.yml"
   },
   "private": true,
   "dependencies": {
