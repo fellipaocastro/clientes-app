@@ -12,8 +12,6 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     (($) => {
-      'use strict';
-
       // Toggle the side navigation
       $('#sidebarToggle').on('click', (e: { preventDefault: () => void }) => {
         e.preventDefault();
