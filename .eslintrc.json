@@ -16,6 +16,7 @@
         "createDefaultProgram": true
       },
       "extends": [
+        "airbnb-base",
         "prettier",
         "plugin:@angular-eslint/ng-cli-compat",
         "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
@@ -39,7 +40,25 @@
             "style": "camelCase"
           }
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+        ],
+        "import/prefer-default-export": "off"
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
       }
     },
     {
@@ -51,5 +70,8 @@
       ],
       "rules": {}
     }
-  ]
+  ],
+  "env": {
+    "jest": true
+  }
 }
