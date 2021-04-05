@@ -10,8 +10,8 @@
     "e2e": "npx ng e2e",
     "eslint": "npx eslint src -c .eslintrc --ext js",
     "eslint:fix": "npx eslint --fix src -c .eslintrc --ext js",
-    "prettier": "npx prettier --check 'src/**/*.js'",
-    "prettier:fix": "npx prettier --write 'src/**/*.js'",
+    "prettier": "npx prettier --check 'src/**/*.ts'",
+    "prettier:fix": "npx prettier --write 'src/**/*.ts'",
     "sass-lint": "npx sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
     "sass-lint:fix": "npx sass-lint-auto-fix -c .sass-lint.yml"
   },
