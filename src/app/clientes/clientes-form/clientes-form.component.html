@@ -1,53 +1,83 @@
 <h1 class="mt-4">Clientes</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Cadastro</li>
+  <li class="breadcrumb-item active">Cadastro</li>
 </ol>
 <div class="container">
-    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-success" role="alert" *ngIf="!!success">
-                    Cliente salvo com sucesso!
-                </div>
-                <div class="alert alert-danger" role="alert" *ngFor="let error of errors">
-                    {{ error }}
-                </div>
-            </div>
+  <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success" role="alert" *ngIf="!!success">
+          Cliente salvo com sucesso!
         </div>
-        <div class="row" *ngIf="cliente.id">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="id">ID:</label>
-                    <input type="text" class="form-control" id="id" name="id" disabled [ngModel]="cliente.id" />
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="dataCadastro">Data de cadastro:</label>
-                    <input type="text" class="form-control" id="dataCadastro" name="dataCadastro" disabled [ngModel]="cliente.dataCadastro" />
-                </div>
-            </div>
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngFor="let error of errors"
+        >
+          {{ error }}
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="nome">Nome: *</label>
-                    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="cliente.nome" />
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="cpf">CPF: *</label>
-                    <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="cliente.cpf" />
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="cliente.id">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="id">ID:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            name="id"
+            disabled
+            [ngModel]="cliente.id"
+          />
         </div>
-        <div class="row">
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-success">
-                    <em class="fa fa-save"></em> Salvar
-                </button>
-            </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dataCadastro">Data de cadastro:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="dataCadastro"
+            name="dataCadastro"
+            disabled
+            [ngModel]="cliente.dataCadastro"
+          />
         </div>
-    </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nome">Nome: *</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            name="nome"
+            [(ngModel)]="cliente.nome"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="cpf">CPF: *</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cpf"
+            name="cpf"
+            [(ngModel)]="cliente.cpf"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success">
+          <em class="fa fa-save"></em> Salvar
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
